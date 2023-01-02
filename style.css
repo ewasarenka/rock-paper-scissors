@@ -6,6 +6,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     color: #F9FAF8;
+    font-size: 2em;
     background-color: #3d3c4c;
     display: flex;
     flex-direction: column;
@@ -16,13 +17,16 @@ body {
 
 button {
   /*   height: 100px; */
-    width: 100px;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    width: 5em;
+    height: 5em;
     background-color: #6aba9c;
     border-style: none;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1em;
     color: #F9FAF8;
+}
+
+button[name="Reset"] {
+    height: 3em;
 }

@@ -30,7 +30,6 @@ let playerScore = 0;
 Score.textContent = `You ${playerScore} : ${computerScore} Computer`;
 
 Buttons.forEach((btn) => {
-    console.log(btn);
     btn.addEventListener('click', (event) => { 
         
         if (btn.name=="Reset") {
