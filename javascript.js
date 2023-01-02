@@ -22,24 +22,38 @@ function playRound(playerSelection, computerSelection) {
     return result;
     }
 
-    const Div = document.querySelector('.results');
-    const Score = document.querySelector('.score');
-    const Buttons = document.querySelectorAll('button');
-    let computerScore = 0;
-    let playerScore = 0;
+const Div = document.querySelector('.results');
+const Score = document.querySelector('.score');
+const Buttons = document.querySelectorAll('button');
+let computerScore = 0;
+let playerScore = 0;
+Score.textContent = `You ${playerScore} : ${computerScore} Computer`;
 
-    Buttons.forEach((btn) => {
-        btn.addEventListener('click', (event) => {
-            let roundResult = playRound(btn.innerHTML,getComputerChoice());
+Buttons.forEach((btn) => {
+    console.log(btn);
+    btn.addEventListener('click', (event) => { 
+        
+        if (btn.name=="Reset") {
+            computerScore = 0;
+            playerScore = 0;
+            Div.textContent = "";
+            Score.textContent = `You ${playerScore} : ${computerScore} Computer`;
+        } else {
+            let roundResult = playRound(btn.name,getComputerChoice());
             Div.textContent = roundResult;
             if(roundResult.search('Won') > -1) {
                 playerScore++ ;
             } else if (roundResult.search('Lose') > -1) {
                 computerScore++ ;
             }
-            Score.textContent = `You ${playerScore} : ${computerScore} Computer`
-        }); 
-    });
+            Score.textContent = `You ${playerScore} : ${computerScore} Computer`;
+        }
+    }); 
+});
+
+
+
+
     
    
 
