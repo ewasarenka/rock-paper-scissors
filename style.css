@@ -1,32 +1,65 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 1.5rem;
 }
 
 body {
     font-family: 'Courier New', Courier, monospace;
     color: #F9FAF8;
-    font-size: 2em;
     background-color: #3d3c4c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1em;
-    margin-top: 10em;
+    margin-top: 100px;
 }
+
+div {
+display: flex;
+margin: 50px 0px;
+gap: 40px;
+justify-content: center;
+text-align: center;
+text-align: center;
+}
+
 
 button {
-  /*   height: 100px; */
-    width: 5em;
-    height: 5em;
-    background-color: #6aba9c;
-    border-style: none;
-    border-radius: 10px;
+    width: 8rem;
+    aspect-ratio: 1 / 1;
     font-weight: bold;
-    font-size: 1em;
     color: #F9FAF8;
+    background-color: #6aba9d8f;
+    border-style: none;
+    border-radius: 0.5em;
+    display: grid;
+    gap: 0px;
+    align-items: center;
 }
 
-button[name="Reset"] {
-    height: 3em;
+
+button:hover, button:focus   {
+    text-shadow: 0 0 15px black;
 }
+
+button[name=Rock]::before {
+    content: '🪨';
+    font-size: 3rem;
+}
+button[name=Paper]::before {
+    content: '📃';
+    font-size: 3rem;
+}
+button[name=Scissors]::before {
+    content: '✂️';
+    font-size: 3rem;
+}
+button[name=Reset] {
+    height: 4rem;
+}
+
+a, a:visited {
+    all: unset
+}
+
+a:hover {
+    color: #6aba9c;
+}
+

@@ -7,6 +7,6 @@ You can play here: [Live site](https://ewasarenka.github.io/rock-paper-scissors/
 
 
 ## Built With
-HTML5 <br>
-CSS3 <br>
+HTML <br>
+CSS <br>
 Vanilla JavaScript

@@ -31,15 +31,17 @@ Score.textContent = `You ${playerScore} : ${computerScore} Computer`;
 
 Buttons.forEach((btn) => {
     btn.addEventListener('click', (event) => { 
-        
+       
         if (btn.name=="Reset") {
             computerScore = 0;
             playerScore = 0;
             Div.textContent = "";
             Score.textContent = `You ${playerScore} : ${computerScore} Computer`;
-        } else {
+
+        } else if (btn.name != undefined ) {
             let roundResult = playRound(btn.name,getComputerChoice());
             Div.textContent = roundResult;
+
             if(roundResult.search('Won') > -1) {
                 playerScore++ ;
             } else if (roundResult.search('Lose') > -1) {
